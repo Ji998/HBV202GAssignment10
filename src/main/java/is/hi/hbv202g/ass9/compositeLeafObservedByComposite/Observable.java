@@ -3,7 +3,7 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 import java.util.List;
 import java.util.ArrayList;
 public abstract class Observable {
-    private List<Observer> observers;
+    protected List<Observer> observers;
     public Observable() {
         observers=new ArrayList<Observer>();
     }
