@@ -1,9 +1,13 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
+package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
+
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.MathExpression;
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf;
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlusComposite implements MathExpression ,Observer{
+public class PlusComposite implements MathExpression, Observer {
     List<NumberLeaf> values;
     private int  lastObservedResult;
 
