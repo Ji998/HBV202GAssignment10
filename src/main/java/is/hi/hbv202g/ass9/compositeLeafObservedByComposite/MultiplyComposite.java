@@ -3,7 +3,7 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite extends MathExpression {
+public class MultiplyComposite implements MathExpression {
 
     List<NumberLeaf> values;
 
