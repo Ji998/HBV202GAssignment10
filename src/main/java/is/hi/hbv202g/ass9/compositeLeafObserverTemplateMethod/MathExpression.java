@@ -1,5 +1,5 @@
 package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
 
 public interface MathExpression {
-    public int getResult();
+    public int getResult(int a, int b);
 }

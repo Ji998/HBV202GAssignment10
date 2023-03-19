@@ -1,7 +1,9 @@
-package is.hi.hbv202g.ass9.compositeTemplateMethod;
+package is.hi.hbv202g.ass9.compositeLeafObservedTemplateMethod;
 
-import is.hi.hbv202g.ass9.composite.NumberLeaf;
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MixedCompositeObserverTest {
 

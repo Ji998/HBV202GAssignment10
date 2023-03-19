@@ -1,7 +1,8 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 
-import is.hi.hbv202g.ass9.composite.NumberLeaf;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MixedCompositeObserverTest {
 
