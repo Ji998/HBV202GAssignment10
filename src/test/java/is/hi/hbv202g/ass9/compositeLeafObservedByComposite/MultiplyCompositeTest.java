@@ -42,8 +42,8 @@ public class MultiplyCompositeTest {
 		multiplyComposite.add(number4);
 
 		MultiplyComposite multiplyComposite2 = new MultiplyComposite();
-		multiplyComposite2.add(multiplyComposite);
-		multiplyComposite2.add(multiplyComposite);
+		multiplyComposite2.add(new NumberLeaf(2));
+		multiplyComposite2.add(new NumberLeaf(4));
 		assertEquals(64, multiplyComposite.getResult());
 	}
 

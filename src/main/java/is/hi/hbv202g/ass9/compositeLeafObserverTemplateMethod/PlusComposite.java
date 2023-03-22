@@ -10,4 +10,9 @@ public class PlusComposite extends MathObject {
             }
         };
     }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
+    }
 }

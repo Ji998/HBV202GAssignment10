@@ -35,4 +35,6 @@ public abstract class MathObject implements Observer {
     public int getLastObservedResult() {
         return lastObservedResult;
     }
+
+    public abstract void update(Observable o, Object arg);
 }

@@ -18,7 +18,7 @@ public class NumberLeafObservedTest implements Observer {
 	
 	@Test
 	public void testAttachAndUpdateAfterSetValue() {
-		number1.attach(this);
+		number1.attach(this::testAttachAndUpdateAfterSetValue);
 		number1.setValue(3);
 
 		assertEquals(3, lastObservedResult);

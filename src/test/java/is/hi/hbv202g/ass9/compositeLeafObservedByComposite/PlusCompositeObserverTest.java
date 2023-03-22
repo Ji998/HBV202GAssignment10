@@ -3,6 +3,8 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class PlusCompositeObserverTest {
 
 	private PlusComposite plusComposite;
@@ -19,7 +21,7 @@ public class PlusCompositeObserverTest {
 
 		plusComposite.update(); // This will cause stuff printed on the screen: this is not tested.
 
-		assertEquals(1, plusComposite.getLastObservedResult()); 
+		assertEquals(1, plusComposite.getResult());
 	}
 
 }

@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
 
+import static org.junit.Assert.assertEquals;
+
 public class MultiplyCompositeTest {
 
 	private MultiplyComposite multiplyComposite;
@@ -19,7 +21,7 @@ public class MultiplyCompositeTest {
 		NumberLeaf number2 = new NumberLeaf(2);
 
 		multiplyComposite.add(number2);
-		assertEquals(2, multiplyComposite.getResult());
+		assert (multiplyComposite.getLastObservedResult() == 2);
 	}
 
 	public void testTwoElementMultiplyComposite() {
@@ -29,7 +31,7 @@ public class MultiplyCompositeTest {
 
 		multiplyComposite.add(number2);
 		multiplyComposite.add(number4);
-		assertEquals(8, multiplyComposite.getResult());
+		assertEquals(8, multiplyComposite.getLastObservedResult());
 	}
 
 	public void testNestedMultiplyComposite() {
@@ -41,9 +43,9 @@ public class MultiplyCompositeTest {
 		multiplyComposite.add(number4);
 
 		MultiplyComposite multiplyComposite2 = new MultiplyComposite();
-		multiplyComposite2.add(multiplyComposite);
-		multiplyComposite2.add(multiplyComposite);
-		assertEquals(64, multiplyComposite.getResult());
+		multiplyComposite2.add(number2);
+		multiplyComposite2.add(number4);
+		assertEquals(64, multiplyComposite.getLastObservedResult());
 	}
 
 	

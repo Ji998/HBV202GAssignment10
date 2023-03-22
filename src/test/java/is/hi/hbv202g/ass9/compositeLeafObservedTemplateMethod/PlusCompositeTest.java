@@ -5,6 +5,8 @@ import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class PlusCompositeTest {
 
 	private PlusComposite plusComposite;
@@ -16,7 +18,7 @@ public class PlusCompositeTest {
 
 	@Test
 	public void testEmptyPlusComposite() {
-		assertEquals(0, plusComposite.getResult());
+		assertEquals(0, plusComposite.getLastObservedResult());
 	}
 
 	@Test
@@ -24,7 +26,7 @@ public class PlusCompositeTest {
 		NumberLeaf number1 = new NumberLeaf(1);
 
 		plusComposite.add(number1);
-		assertEquals(1, plusComposite.getResult());
+		assertEquals(1, plusComposite.getLastObservedResult());
 	}
 
 	@Test
@@ -34,7 +36,7 @@ public class PlusCompositeTest {
 
 		plusComposite.add(number1);
 		plusComposite.add(number2);
-		assertEquals(3, plusComposite.getResult());
+		assertEquals(3, plusComposite.getLastObservedResult());
 	}
 
 	@Test
@@ -46,10 +48,10 @@ public class PlusCompositeTest {
 		plusComposite.add(number2);
 
 		PlusComposite plusComposite2 = new PlusComposite();
-		plusComposite2.add(plusComposite);
-		plusComposite2.add(plusComposite);
+		plusComposite2.add(number1);
+		plusComposite2.add(number2);
 
-		assertEquals(6, plusComposite2.getResult());
+		assertEquals(6, plusComposite2.getLastObservedResult());
 	}
 
 }
