@@ -13,7 +13,7 @@ public class MultiplyComposite implements MathExpression {
     }
 
     public int getResult() {
-        int result = 0;
+        int result = 1;
         for (MathExpression value: values){
             result *= value.getResult();
         }
