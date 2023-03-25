@@ -4,15 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class MathObject implements MathExpression, Observer {
-    protected List<NumberLeaf> values;
+    protected List<MathExpression> values;
 
-    public MathObject(){
-        values = new ArrayList<NumberLeaf>();
+    protected int lastObservedResult;
+
+    MathObject(){
+        values = new ArrayList<MathExpression>();
+        lastObservedResult = 0;
     }
 
-    public void add(NumberLeaf value){
+    public void add(MathExpression value){
         values.add(value);
     }
 
-    public abstract void update(Observable o, Object arg);
+    public void update() {
+        int result = 0;
+        lastObservedResult = result;
+    }
+
+    public int getLastObservedResult() {
+        return lastObservedResult;
+    }
 }

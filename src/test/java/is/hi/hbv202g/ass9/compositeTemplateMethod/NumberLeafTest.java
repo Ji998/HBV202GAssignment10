@@ -1,5 +1,6 @@
 package is.hi.hbv202g.ass9.compositeTemplateMethod;
 
+import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

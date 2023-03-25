@@ -1,12 +1,9 @@
 package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
 
-import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.MathExpression;
-import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.Observable;
-import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.Observer;
-
 public class NumberLeaf extends Observable implements MathExpression {
     private int value;
 
+    private boolean isChanged = false;
     public NumberLeaf(int value) {
         this.value = value;
     }
@@ -18,9 +15,16 @@ public class NumberLeaf extends Observable implements MathExpression {
 
     public void setValue(int value) {
         this.value = value;
+        setState(true);
     }
     public void addObserver(Observer observer){
         addObserver(observer);
+    }
+
+    public void setState(boolean state){
+        isChanged = state;
+        notifyObservers();
+        isChanged = false;
     }
 
 }

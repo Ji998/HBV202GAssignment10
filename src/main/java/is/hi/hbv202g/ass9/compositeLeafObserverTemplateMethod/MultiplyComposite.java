@@ -1,51 +1,29 @@
 package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
 
-import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.MathExpression;
 import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf;
 import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite implements MathExpression, Observer {
-
-    List<is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf> values;
- private int  lastObservedResult;
+public class MultiplyComposite extends MathObject {
     public MultiplyComposite(){
-        values = new ArrayList<is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf>();
+        super();
     }
 
     @Override
     public int getResult() {
-        int result = 0;
-        for (is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf value: values){
+        int result = 1;
+        for (MathExpression value: values){
             result *= value.getResult();
         }
         return result;
     }
 
-    public void add(is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf value){
-        values.add(value);
-    }
-
     @Override
     public void update() {
-       int result = 0;
-        for (NumberLeaf value: values){
-            result *= value.getResult();
-
-
-        }
-        lastObservedResult=result;
+        int result = getResult();
+        this.lastObservedResult=result;
         System.out.println("The result of ("+lastObservedResult+")*"+values.get(0).getResult()+" is: "+ result);
-
-
-
-    }
-
-
-    @Override
-    public void update(Observable o, Object arg) {
-
     }
 }

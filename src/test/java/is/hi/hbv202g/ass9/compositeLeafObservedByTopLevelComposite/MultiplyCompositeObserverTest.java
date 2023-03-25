@@ -2,6 +2,7 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
 
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.*;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.*;
 public class NumberLeafObservedTest implements Observer {
 
 	private int lastObservedResult;
