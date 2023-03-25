@@ -1,9 +1,9 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
+package is.hi.hbv202g.ass9.compositeTemplateMethod;
+
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class MultiplyCompositeObserverTest {
 
@@ -22,6 +22,6 @@ public class MultiplyCompositeObserverTest {
 
 		multiplyComposite.update(); // This will cause stuff printed on the screen: this is not tested.
 
-		assertEquals(2, multiplyComposite.getResult());
+		assertEquals(2, multiplyComposite.getLastObservedResult());
 	}
 }

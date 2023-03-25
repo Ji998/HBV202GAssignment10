@@ -1,4 +1,4 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
 

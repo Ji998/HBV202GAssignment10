@@ -1,4 +1,4 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
 
@@ -46,8 +46,8 @@ public class PlusCompositeTest {
 		plusComposite.add(number2);
 
 		PlusComposite plusComposite2 = new PlusComposite();
-		plusComposite2.add(new NumberLeaf(1));
-		plusComposite2.add(new NumberLeaf(2));
+		plusComposite2.add(plusComposite);
+		plusComposite2.add(plusComposite);
 
 		assertEquals(6, plusComposite2.getResult());
 	}

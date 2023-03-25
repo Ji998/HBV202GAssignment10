@@ -1,6 +1,7 @@
 package is.hi.hbv202g.ass9;
 
-import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
+import is.hi.hbv202g.ass9.composite.*;
+
 public class CompositeMain {
 
 	public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class CompositeMain {
 
 		MultiplyComposite multiplyComposite = new MultiplyComposite();
 		multiplyComposite.add(number4);
+		multiplyComposite.add(plusComposite);
 
-		//System.out.println("The result of ("+number1.getResult()+"+"+number2.getResult()+")*"+number4.getResult()+" is: "+ multiplyComposite.getResult());
-		 }
+		System.out.println("The result of ("+number1.getResult()+"+"+number2.getResult()+")*"+number4.getResult()+" is: "+ multiplyComposite.getResult());	}
 }

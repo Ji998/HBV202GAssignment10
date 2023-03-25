@@ -1,13 +1,7 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedTemplateMethod;
+package is.hi.hbv202g.ass9.compositeTemplateMethod;
 
-import is.hi.hbv202g.ass9.CompositeMain;
-import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
+import is.hi.hbv202g.ass9.composite.NumberLeaf;
 import org.junit.Test;
-
-import javax.swing.*;
-
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 public class MixedCompositeObserverTest {
 
@@ -24,11 +18,11 @@ public class MixedCompositeObserverTest {
 
 		MultiplyComposite multiplyComposite = new MultiplyComposite();
 		multiplyComposite.add(number4);
-		multiplyComposite.add(new NumberLeaf(3));
+		multiplyComposite.add(plusComposite);
 
-		number1.attach(plusComposite::getLastObservedResult);
-		number2.attach(multiplyComposite::getLastObservedResult);
-		number4.attach(multiplyComposite::getLastObservedResult);
+		number1.attach(multiplyComposite);
+		number2.attach(multiplyComposite);
+		number4.attach(multiplyComposite);
 
 		number1.setValue(3); // This will cause stuff printed on the screen: this is not tested.
 	

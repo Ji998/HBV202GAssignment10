@@ -1,10 +1,9 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedTemplateMethod;
+package is.hi.hbv202g.ass9.compositeTemplateMethod;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod.*;
 
 public class NumberLeafObservedTest implements Observer {
 
@@ -18,7 +17,7 @@ public class NumberLeafObservedTest implements Observer {
 	
 	@Test
 	public void testAttachAndUpdateAfterSetValue() {
-		number1.attach(this::testAttachAndUpdateAfterSetValue);
+		number1.attach(this);
 		number1.setValue(3);
 
 		assertEquals(3, lastObservedResult);

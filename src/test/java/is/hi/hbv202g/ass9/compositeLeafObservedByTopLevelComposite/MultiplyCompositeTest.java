@@ -1,4 +1,4 @@
-package is.hi.hbv202g.ass9.compositeLeafObservedByComposite;
+package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
 
@@ -42,8 +42,8 @@ public class MultiplyCompositeTest {
 		multiplyComposite.add(number4);
 
 		MultiplyComposite multiplyComposite2 = new MultiplyComposite();
-		multiplyComposite2.add(new NumberLeaf(2));
-		multiplyComposite2.add(new NumberLeaf(4));
+		multiplyComposite2.add(multiplyComposite);
+		multiplyComposite2.add(multiplyComposite);
 		assertEquals(64, multiplyComposite.getResult());
 	}
 

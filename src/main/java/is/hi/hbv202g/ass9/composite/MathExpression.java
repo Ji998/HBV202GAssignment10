@@ -1,5 +1,7 @@
 package is.hi.hbv202g.ass9.composite;
 
-public interface MathExpression {
-    public int getResult();
+public abstract class MathExpression {
+    public int getResult(){
+        return 0;
+    }
 }
