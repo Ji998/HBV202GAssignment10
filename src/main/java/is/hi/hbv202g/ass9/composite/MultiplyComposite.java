@@ -3,24 +3,24 @@ package is.hi.hbv202g.ass9.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite extends MathExpression {
+public class MultiplyComposite implements MathExpression {
 
-    List<NumberLeaf> values;
+    List<MathExpression> values;
+
 
     public MultiplyComposite(){
-        values = new ArrayList<NumberLeaf>();
+        values = new ArrayList<MathExpression>();
     }
 
-    @Override
     public int getResult() {
         int result = 0;
-        for (NumberLeaf value: values){
+        for (MathExpression value: values){
             result *= value.getResult();
         }
         return result;
     }
 
-    public void add(NumberLeaf value){
+    public void add(MathExpression value){
         values.add(value);
     }
 }
