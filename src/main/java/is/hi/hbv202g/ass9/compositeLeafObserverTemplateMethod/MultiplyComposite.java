@@ -24,6 +24,5 @@ public class MultiplyComposite extends MathObject {
     public void update() {
         int result = getResult();
         this.lastObservedResult=result;
-        System.out.println("The result of ("+lastObservedResult+")*"+values.get(0).getResult()+" is: "+ result);
     }
 }

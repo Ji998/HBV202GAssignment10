@@ -28,7 +28,6 @@ public class MultiplyComposite implements MathExpression,Observer {
     public void update() {
        int result = getResult();
         lastObservedResult=result;
-        System.out.println("The result of ("+lastObservedResult+")*"+values.get(0).getResult()+" is: "+ result);
     }
 
     public int getLastObservedResult() {

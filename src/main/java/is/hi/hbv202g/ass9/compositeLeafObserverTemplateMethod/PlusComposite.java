@@ -21,6 +21,5 @@ public class PlusComposite extends MathObject {
     public void update(){
         int result = getResult();
         lastObservedResult=result;
-        System.out.println("The result of ("+lastObservedResult+")+"+values.get(0).getResult()+" is: "+ result);
     }
 }
