@@ -28,7 +28,7 @@ Description:
 
 
 Diagram:
-[CompositeDiagram](src/site/markdown/CompositeUMLDiagram4.jpg) // NEEDS TO BE MOVED TO THE DOCUMENTATION MARKDOWN FILE IN site/markdowm
+[CompositeDiagram](src/site)
 
 
 License:
