@@ -28,7 +28,8 @@ Description:
 
 
 Diagram:
-[CompositeDiagram](src/site)
+[Explanation](src/site/markdown/documentation.md)
+
 
 
 License:
