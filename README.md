@@ -18,15 +18,7 @@ Maven:
 
 - `mvn compile` compiles all implementation classes.
 - `mvn test` runs all test cases (i.e. all classes with a name that either starts with `Test` or ends with `Test`, `Tests`, or `TestCase`).
-
-Description:
-
-  - `is.hi.hbv202g.ass9.composite`A simple composite pattern.
-  - `is.hi.hbv202g.ass9.compositeLeafObservedByComposite`:an implementation of the composite pattern that is combined with the observable patterns.
-  - `is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod`:a refactoring of the above patterns inspired by the template method pattern.
-
-
-
+- 
 Diagram:
 [Explanation](src/site/markdown/documentation.md)
 
